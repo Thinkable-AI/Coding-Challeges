@@ -13,7 +13,7 @@ This technical assessment is designed to evaluate your skills in backend develop
 - Remember, effective communication is a key aspect of the assessment and will be considered in the evaluation of your performance. We encourage you to actively participate in discussions and collaborate with others in the community.
 ### Start Your Challenge
 - Set up a new GitHub repository to host your project.
-- Email the repository link to `ali@thinkable.co` with the subject line 'Coding Challenge Software Engineer Intern Application by [Your First Name] [Your Last Name]'.
+- Email the repository link to `soulaimane@thinkable.co` with the subject line 'Coding Challenge Software Engineer Intern Application by [Your First Name] [Your Last Name]'.
 - An email will be sent to you containing OpenAI API key.
 
 ### Request Support
