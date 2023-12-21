@@ -7,6 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
+    "ingest": "ts-node -r dotenv/config src/shared/scripts/ingest-data.ts",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.json\" \"test/**/*.ts\" \"test/**/*.json\"",
     "format:check": "npm run format -- -c",
     "format:write": "npm run format -- --write",
@@ -28,14 +29,18 @@
   "dependencies": {
     "@apollo/server": "^4.9.5",
     "@nestjs/apollo": "^12.0.11",
-    "@nestjs/common": "^9.0.0",
+    "@nestjs/common": "^9.4.3",
     "@nestjs/config": "^3.1.1",
-    "@nestjs/core": "^9.0.0",
+    "@nestjs/core": "^9.4.3",
     "@nestjs/graphql": "^12.0.11",
     "@nestjs/mongoose": "^10.0.2",
     "@nestjs/platform-express": "^9.0.0",
+    "@pinecone-database/pinecone": "^1.1.2",
+    "langchain": "^0.0.209",
     "mongoose": "^8.0.2",
     "mongoose-autopopulate": "^1.1.0",
+    "pdf-parse": "^1.1.1",
+    "pinecone": "^0.1.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "winston": "^3.11.0"
@@ -59,7 +64,7 @@
     "supertest": "^6.1.3",
     "ts-jest": "29.1.0",
     "ts-loader": "^9.2.3",
-    "ts-node": "^10.0.0",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "4.2.0",
     "typescript": "^5.0.0"
   },

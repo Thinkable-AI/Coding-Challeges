@@ -2,6 +2,24 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type ChatMessageType {
+  content: String!
+  isUser: Boolean!
+  sourceDocs: [Message!]
+}
+
+type Message {
+  isStreaming: Boolean!
+  message: String!
+  sourceDocs: [ChatMessageType!]
+}
+
+type Mutation {
+  sendMessage(content: String!, isUser: Boolean!): String!
+}
+
 type Query {
+  askQuestion(question: String!): String!
   getHello: String!
+  getMessages: [ChatMessageType!]!
 }

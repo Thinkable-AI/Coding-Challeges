@@ -7,6 +7,9 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
+    "paths": {
+      "@/*": ["./src/shared/*"]
+    },
     "sourceMap": true,
     "outDir": "backend/dist",
     "baseUrl": "./",

@@ -6,18 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.ChatModule = void 0;
 const common_1 = require("@nestjs/common");
-const shared_module_1 = require("./shared/shared.module");
-const app_resolver_1 = require("./app.resolver");
-const chat_module_1 = require("./shared/chat.module");
-let AppModule = class AppModule {
+const mongoose_1 = require("@nestjs/mongoose");
+const chat_service_1 = require("./services/chat.service");
+const message_model_1 = require("./models/message.model");
+let ChatModule = class ChatModule {
 };
-exports.AppModule = AppModule;
-exports.AppModule = AppModule = __decorate([
+exports.ChatModule = ChatModule;
+exports.ChatModule = ChatModule = __decorate([
     (0, common_1.Module)({
-        imports: [shared_module_1.SharedModule, chat_module_1.ChatModule],
-        providers: [app_resolver_1.AppResolver],
+        imports: [mongoose_1.MongooseModule.forFeature([{ name: message_model_1.Message.name, schema: message_model_1.MessageSchema }])],
+        providers: [chat_service_1.ChatService],
+        exports: [chat_service_1.ChatService],
     })
-], AppModule);
-//# sourceMappingURL=app.module.js.map
+], ChatModule);
+//# sourceMappingURL=chat.module.js.map

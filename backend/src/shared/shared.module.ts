@@ -34,7 +34,7 @@ import { join } from 'path';
           uploads: false,
           sortSchema: true,
           introspection: true,
-          playground: false, // configService.get<boolean>('GRAPHQL_DEBUG'), // configService.get<boolean>('GRAPHQL_PLAYGROUND'), // to enable plugins must to disable this.
+          playground: false,
           debug: configService.get<boolean>('GRAPHQL_DEBUG'),
           cors: {
             credentials: true,
