@@ -1,6 +1,6 @@
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
-import { ChatService } from './shared/services/chat.service';
-import { ChatMessageType } from './shared/types/message.type'; // Importez le type ChatMessageType
+import { ChatService } from './chat/services/chat/chat.service';
+import { ChatMessageType } from './chat/models/message.model/message.model'; // Importez le type ChatMessageType
 
 @Resolver()
 export class AppResolver {

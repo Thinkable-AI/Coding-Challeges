@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
-    "ingest": "ts-node -r dotenv/config src/shared/scripts/ingest-data.ts",
+    "ingest": "ts-node -r dotenv/config src/pinecone/ingestion/ingest.ts",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.json\" \"test/**/*.ts\" \"test/**/*.json\"",
     "format:check": "npm run format -- -c",
     "format:write": "npm run format -- --write",

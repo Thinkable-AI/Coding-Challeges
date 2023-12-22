@@ -14,8 +14,8 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppResolver = void 0;
 const graphql_1 = require("@nestjs/graphql");
-const chat_service_1 = require("./shared/services/chat.service");
-const message_type_1 = require("./shared/types/message.type");
+const chat_service_1 = require("./chat/services/chat/chat.service");
+const message_model_1 = require("./chat/models/message.model/message.model");
 let AppResolver = class AppResolver {
     constructor(chatService) {
         this.chatService = chatService;
@@ -44,7 +44,7 @@ __decorate([
     __metadata("design:returntype", String)
 ], AppResolver.prototype, "getHello", null);
 __decorate([
-    (0, graphql_1.Query)(() => [message_type_1.ChatMessageType]),
+    (0, graphql_1.Query)(() => [message_model_1.ChatMessageType]),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)

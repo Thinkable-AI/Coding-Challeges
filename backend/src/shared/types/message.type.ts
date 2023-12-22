@@ -1,4 +1,3 @@
-// chat-message.type.ts
 
 import { ObjectType, Field } from '@nestjs/graphql';
 import { Document } from 'langchain/document';

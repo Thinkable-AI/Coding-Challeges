@@ -1,5 +1,5 @@
-import { ChatService } from './shared/services/chat.service';
-import { ChatMessageType } from './shared/types/message.type';
+import { ChatService } from './chat/services/chat/chat.service';
+import { ChatMessageType } from './chat/models/message.model/message.model';
 export declare class AppResolver {
     private readonly chatService;
     constructor(chatService: ChatService);

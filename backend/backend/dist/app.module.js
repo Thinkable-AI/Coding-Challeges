@@ -10,14 +10,17 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const shared_module_1 = require("./shared/shared.module");
 const app_resolver_1 = require("./app.resolver");
-const chat_module_1 = require("./shared/chat.module");
+const pinecone_module_1 = require("./pinecone/pinecone.module");
+const chat_module_1 = require("./chat/chat.module");
+const chat_service_1 = require("./chat/services/chat/chat.service");
+const ChatProcessing_service_1 = require("./pinecone/chat/services/ChatProcessing.service");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [shared_module_1.SharedModule, chat_module_1.ChatModule],
-        providers: [app_resolver_1.AppResolver],
+        imports: [shared_module_1.SharedModule, chat_module_1.ChatModule, pinecone_module_1.PineconeModule],
+        providers: [app_resolver_1.AppResolver, chat_service_1.ChatService, ChatProcessing_service_1.ChatProcessingService],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map

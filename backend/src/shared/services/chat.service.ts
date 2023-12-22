@@ -1,3 +1,5 @@
+// backend/src/shared/services/chat.service.ts
+
 import { Injectable } from '@nestjs/common';
 import { ChatOpenAI } from 'langchain/chat_models/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
