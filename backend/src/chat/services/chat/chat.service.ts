@@ -1,5 +1,9 @@
+import {  MessageDocument } from '@/message/models';
 import { Injectable } from '@nestjs/common';
-import { ChatProcessingService } from 'src/pinecone/chat/services/ChatProcessing.service'; // Assurez-vous que le chemin est correct
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { MessageModel } from 'src/chat/models/message.model/message.model';
+import { ChatProcessingService } from 'src/pinecone/chatTraitement/services/ChatProcessing.service'; 
 
 @Injectable()
 export class ChatService {

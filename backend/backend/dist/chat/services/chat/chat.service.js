@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ChatService = void 0;
 const common_1 = require("@nestjs/common");
-const ChatProcessing_service_1 = require("../../../pinecone/chat/services/ChatProcessing.service");
+const ChatProcessing_service_1 = require("../../../pinecone/chatTraitement/services/ChatProcessing.service");
 let ChatService = class ChatService {
     constructor(chatProcessingService) {
         this.chatProcessingService = chatProcessingService;

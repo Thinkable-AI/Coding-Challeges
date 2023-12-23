@@ -8,16 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PineconeModule = void 0;
 const common_1 = require("@nestjs/common");
-const ChatProcessing_service_1 = require("./chat/services/ChatProcessing.service");
+const ChatProcessing_service_1 = require("./chatTraitement/services/ChatProcessing.service");
 const chat_service_1 = require("../chat/services/chat/chat.service");
 const ingestion_service_1 = require("./ingestion/services/ingestion.service");
 const ingestion_module_1 = require("./ingestion/ingestion.module");
+const chatTraitement_module_1 = require("./chatTraitement/chatTraitement.module");
 let PineconeModule = class PineconeModule {
 };
 exports.PineconeModule = PineconeModule;
 exports.PineconeModule = PineconeModule = __decorate([
     (0, common_1.Module)({
-        imports: [PineconeModule, ingestion_module_1.IngestionModule],
+        imports: [PineconeModule, ingestion_module_1.IngestionModule, chatTraitement_module_1.chatTraitementModule],
         providers: [ChatProcessing_service_1.ChatProcessingService, chat_service_1.ChatService, ingestion_service_1.IngestionService],
     })
 ], PineconeModule);

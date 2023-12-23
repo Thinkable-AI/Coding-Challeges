@@ -3,10 +3,10 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { GraphQLModule } from '@nestjs/graphql';
 import { Connection } from 'mongoose';
-import { LoggerService } from './services/logger/logger.service';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
 import { join } from 'path';
+import { MessageModule } from './message/message.module';
 
 @Module({
   imports: [
@@ -50,7 +50,7 @@ import { join } from 'path';
       inject: [ConfigService],
       imports: [ConfigModule],
     }),
+    MessageModule,
   ],
-  providers: [LoggerService],
 })
 export class SharedModule {}

@@ -13,14 +13,17 @@ const app_resolver_1 = require("./app.resolver");
 const pinecone_module_1 = require("./pinecone/pinecone.module");
 const chat_module_1 = require("./chat/chat.module");
 const chat_service_1 = require("./chat/services/chat/chat.service");
-const ChatProcessing_service_1 = require("./pinecone/chat/services/ChatProcessing.service");
+const ChatProcessing_service_1 = require("./pinecone/chatTraitement/services/ChatProcessing.service");
+const message_module_1 = require("./shared/message/message.module");
+const message_model_1 = require("./chat/models/message.model/message.model");
+const chatTraitement_module_1 = require("./pinecone/chatTraitement/chatTraitement.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [shared_module_1.SharedModule, chat_module_1.ChatModule, pinecone_module_1.PineconeModule],
-        providers: [app_resolver_1.AppResolver, chat_service_1.ChatService, ChatProcessing_service_1.ChatProcessingService],
+        imports: [chatTraitement_module_1.chatTraitementModule, shared_module_1.SharedModule, chat_module_1.ChatModule, pinecone_module_1.PineconeModule, message_module_1.MessageModule],
+        providers: [app_resolver_1.AppResolver, chat_service_1.ChatService, ChatProcessing_service_1.ChatProcessingService, message_model_1.MessageModel],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map

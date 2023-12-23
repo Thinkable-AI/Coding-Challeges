@@ -36,6 +36,7 @@
     "@nestjs/mongoose": "^10.0.2",
     "@nestjs/platform-express": "^9.0.0",
     "@pinecone-database/pinecone": "^1.1.2",
+    "class-validator": "^0.14.0",
     "langchain": "^0.0.209",
     "mongoose": "^8.0.2",
     "mongoose-autopopulate": "^1.1.0",

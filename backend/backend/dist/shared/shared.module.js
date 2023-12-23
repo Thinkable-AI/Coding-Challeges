@@ -11,10 +11,10 @@ const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const mongoose_1 = require("@nestjs/mongoose");
 const graphql_1 = require("@nestjs/graphql");
-const logger_service_1 = require("./services/logger/logger.service");
 const apollo_1 = require("@nestjs/apollo");
 const default_1 = require("@apollo/server/plugin/landingPage/default");
 const path_1 = require("path");
+const message_module_1 = require("./message/message.module");
 let SharedModule = class SharedModule {
 };
 exports.SharedModule = SharedModule;
@@ -60,8 +60,8 @@ exports.SharedModule = SharedModule = __decorate([
                 inject: [config_1.ConfigService],
                 imports: [config_1.ConfigModule],
             }),
+            message_module_1.MessageModule,
         ],
-        providers: [logger_service_1.LoggerService],
     })
 ], SharedModule);
 //# sourceMappingURL=shared.module.js.map

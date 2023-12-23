@@ -14,6 +14,7 @@ let IngestionModule = class IngestionModule {
 exports.IngestionModule = IngestionModule;
 exports.IngestionModule = IngestionModule = __decorate([
     (0, common_1.Module)({
+        imports: [IngestionModule],
         providers: [ingestion_service_1.IngestionService],
     })
 ], IngestionModule);

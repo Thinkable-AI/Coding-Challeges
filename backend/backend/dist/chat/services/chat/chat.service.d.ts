@@ -1,4 +1,4 @@
-import { ChatProcessingService } from 'src/pinecone/chat/services/ChatProcessing.service';
+import { ChatProcessingService } from 'src/pinecone/chatTraitement/services/ChatProcessing.service';
 export declare class ChatService {
     private readonly chatProcessingService;
     private messages;
