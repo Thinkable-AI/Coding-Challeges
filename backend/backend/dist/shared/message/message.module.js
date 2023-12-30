@@ -10,14 +10,15 @@ exports.MessageModule = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const message_model_1 = require("../../chat/models/message.model/message.model");
+const repositories_1 = require("./repositories");
 let MessageModule = class MessageModule {
 };
 exports.MessageModule = MessageModule;
 exports.MessageModule = MessageModule = __decorate([
     (0, common_1.Module)({
         imports: [mongoose_1.MongooseModule.forFeature([{ name: message_model_1.MessageModel.name, schema: message_model_1.MessageSchema }])],
-        providers: [message_model_1.MessageModel],
-        exports: [message_model_1.MessageModel],
+        providers: [repositories_1.MessageRepository],
+        exports: [repositories_1.MessageRepository],
     })
 ], MessageModule);
 //# sourceMappingURL=message.module.js.map

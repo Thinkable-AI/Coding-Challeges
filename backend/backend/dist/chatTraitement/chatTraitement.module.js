@@ -10,16 +10,16 @@ exports.chatTraitementModule = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const ChatProcessing_service_1 = require("./services/ChatProcessing.service");
-const message_model_1 = require("../../chat/models/message.model/message.model");
-const message_module_1 = require("../../shared/message/message.module");
-const chat_service_1 = require("../../shared/services/chat.service");
+const message_model_1 = require("../chat/models/message.model/message.model");
+const message_module_1 = require("../shared/message/message.module");
 let chatTraitementModule = class chatTraitementModule {
 };
 exports.chatTraitementModule = chatTraitementModule;
 exports.chatTraitementModule = chatTraitementModule = __decorate([
     (0, common_1.Module)({
-        imports: [mongoose_1.MongooseModule.forFeature([{ name: message_model_1.MessageModel.name, schema: message_model_1.MessageSchema }]), message_module_1.MessageModule],
-        providers: [chat_service_1.ChatService, ChatProcessing_service_1.ChatProcessingService],
+        imports: [message_module_1.MessageModule, mongoose_1.MongooseModule.forFeature([{ name: message_model_1.MessageModel.name, schema: message_model_1.MessageSchema }])],
+        providers: [ChatProcessing_service_1.ChatProcessingService],
+        exports: [ChatProcessing_service_1.ChatProcessingService]
     })
 ], chatTraitementModule);
 //# sourceMappingURL=chatTraitement.module.js.map

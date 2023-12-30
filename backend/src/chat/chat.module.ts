@@ -5,11 +5,10 @@ import { Module } from '@nestjs/common';
 import { ChatService } from './services/chat/chat.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { MessageModel } from './models/message.model/message.model';
-import { ChatProcessingService } from 'src/pinecone/chatTraitement/services/ChatProcessing.service';
-
+import { chatTraitementModule } from 'src/chatTraitement/chatTraitement.module';
 @Module({
-  imports: [MongooseModule.forFeature([{ name: MessageModel.name, schema: MessageSchema }])],
-  providers: [ChatService,ChatProcessingService,MessageModel],
-
+  imports: [chatTraitementModule,MessageModule,MongooseModule.forFeature([{ name: MessageModel.name, schema: MessageSchema }])],
+  providers: [ChatService],
+  exports:[ChatService]
 })
 export class ChatModule {}

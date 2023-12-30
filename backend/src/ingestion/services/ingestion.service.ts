@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
 import { PineconeStore } from 'langchain/vectorstores/pinecone';
-import { pinecone } from '../../../shared/libs/pinecone'
 import { PDFLoader } from 'langchain/document_loaders/fs/pdf';
 import { DirectoryLoader } from 'langchain/document_loaders/fs/directory';
+import { pinecone } from '@/libs/pinecone';
 
 @Injectable()
 export class IngestionService {

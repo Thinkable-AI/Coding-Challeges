@@ -7,19 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ChatModule = void 0;
+const message_module_1 = require("../shared/message/message.module");
 const models_1 = require("../shared/message/models");
 const common_1 = require("@nestjs/common");
 const chat_service_1 = require("./services/chat/chat.service");
 const mongoose_1 = require("@nestjs/mongoose");
 const message_model_1 = require("./models/message.model/message.model");
-const ChatProcessing_service_1 = require("../pinecone/chatTraitement/services/ChatProcessing.service");
+const chatTraitement_module_1 = require("../chatTraitement/chatTraitement.module");
 let ChatModule = class ChatModule {
 };
 exports.ChatModule = ChatModule;
 exports.ChatModule = ChatModule = __decorate([
     (0, common_1.Module)({
-        imports: [mongoose_1.MongooseModule.forFeature([{ name: message_model_1.MessageModel.name, schema: models_1.MessageSchema }])],
-        providers: [chat_service_1.ChatService, ChatProcessing_service_1.ChatProcessingService, message_model_1.MessageModel],
+        imports: [chatTraitement_module_1.chatTraitementModule, message_module_1.MessageModule, mongoose_1.MongooseModule.forFeature([{ name: message_model_1.MessageModel.name, schema: models_1.MessageSchema }])],
+        providers: [chat_service_1.ChatService],
+        exports: [chat_service_1.ChatService]
     })
 ], ChatModule);
 //# sourceMappingURL=chat.module.js.map

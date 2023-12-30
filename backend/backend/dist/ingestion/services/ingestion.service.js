@@ -11,9 +11,9 @@ const common_1 = require("@nestjs/common");
 const text_splitter_1 = require("langchain/text_splitter");
 const openai_1 = require("langchain/embeddings/openai");
 const pinecone_1 = require("langchain/vectorstores/pinecone");
-const pinecone_2 = require("../../../shared/libs/pinecone");
 const pdf_1 = require("langchain/document_loaders/fs/pdf");
 const directory_1 = require("langchain/document_loaders/fs/directory");
+const pinecone_2 = require("../../shared/libs/pinecone");
 let IngestionService = class IngestionService {
     async ingestFiles(filePath) {
         try {

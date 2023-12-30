@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { MessageModel } from 'src/chat/models/message.model/message.model';
-import { ChatProcessingService } from 'src/pinecone/chatTraitement/services/ChatProcessing.service'; 
+import { ChatProcessingService } from 'src/chatTraitement/services/ChatProcessing.service'; 
 
 @Injectable()
 export class ChatService {
