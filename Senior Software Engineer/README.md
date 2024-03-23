@@ -14,7 +14,6 @@ Develop an AI-enhanced task management system where users can create, view, edit
 - Users should be able to edit the title, description, status, and due date of existing tasks.
 - Users should be able to delete tasks.
 - The system should provide an AI-powered feature (task summarization, completion time prediction, or task categorization) based on the task description.
-- The AI-powered feature should be seamlessly integrated into the user interface.
 - The system should handle errors gracefully and provide appropriate feedback to the user.
 
 ## Technical Requirements
@@ -29,10 +28,6 @@ Develop an AI-enhanced task management system where users can create, view, edit
 - **Error Handling**: Ensure comprehensive error handling for both standard and AI-enhanced functionalities.
 - **Unit Testing**: Write unit tests to ensure the correctness and reliability of the backend functionality.
 
-### Frontend (Angular 17)
-- **Task Management UI**: Implement a user interface for task management, including listing, viewing, creating, editing, and deleting tasks.
-- **AI Feature Integration**: Seamlessly integrate the chosen AI feature. Provide a user-friendly interface for interacting with the AI functionality.
-
 ### Nice to Have
 - Implement a GitHub Actions CI/CD pipeline for running tests, ESLint checks, TypeScript checks, or even deployment upon pushing code to the repository. This will help maintain code quality and streamline the development process.
 - Dockerize the application using Docker Compose to simplify the setup and deployment process. This will allow for consistent development environments and ease of deployment to various environments.
@@ -43,9 +38,8 @@ Develop an AI-enhanced task management system where users can create, view, edit
 - **Code Quality**: Code should be clean, well-organized, and adhere to best practices.
 - **Git Commit History**: Maintain an orderly commit history.
 - **Documentation**: Provide clear and concise documentation.
-- **Communication**: Effectively communicate throughout the challenge.
 - **AI Integration and Prompt Engineering**: The integration of AI features should be seamless, with well-crafted prompts that demonstrate an understanding of effective prompt engineering and prompting techniques.
-- **Unit Testing**: Implement comprehensive unit tests for backend.
+- **Unit Testing**: Implement comprehensive unit tests for the backend.
 
 ## Deliverables
 - Complete source code for the frontend and backend, including any configuration files necessary for local setup.
@@ -53,7 +47,6 @@ Develop an AI-enhanced task management system where users can create, view, edit
 
 ## Notes for Candidates
 - Focus on demonstrating your ability to integrate complex functionalities in a seamless and user-centric way.
-- While aesthetic design is not the primary focus, ensure that the application provides a basic level of usability and visual appeal.
 - Quality over speed: Aim for a well-structured, maintainable codebase.
 - Adhere to key software engineering principles: DRY, KISS, YAGNI, and SOLID.
 - Ensure the code is readable and maintainable.
