@@ -15,7 +15,7 @@ This technical assessment is designed to evaluate your skills as a fullstack eng
 ### Start Your Challenge
 - Set up a new GitHub repository to host your project.
 - Email the repository link to `ali@thinkable.co` with the subject line **'*Coding Challenge Software Engineer Intern Application by [Your First Name] [Your Last Name]*'**.
-- The deadline to start the challenge (send the email) is 12 hours from receiving these instructions. If you don't start your project and send the email within the next 12 hours, you will be eliminated from the assessment.
+- The deadline to start the challenge (send the email) is 24 hours from receiving these instructions. If you don't start your project and send the email within the next 24 hours, you will be eliminated from the assessment.
 
 ### Challenge Duration
 - The challenge duration is 3 days, starting from the timestamp of your email containing the GitHub repository link.
